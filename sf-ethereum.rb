@@ -5,21 +5,21 @@
 class SfEthereum < Formula
   desc "Firehose on Ethereum stack"
   homepage "https://github.com/streamingfast/sf-ethereum"
-  version "0.10.0-rc.3"
+  version "0.10.0-rc.4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/sf-ethereum/releases/download/v0.10.0-rc.3/sfeth_0.10.0-rc.3_macOS_x86_64.tar.gz"
-      sha256 "0cdf5c3e24bc8ba5763d5af64a758bcca39d8c5a7251b6337f18d01f38114d19"
+      url "https://github.com/streamingfast/sf-ethereum/releases/download/v0.10.0-rc.4/sf-ethereum_0.10.0-rc.4_macOS_x86_64.tar.gz"
+      sha256 "e04cbafe956cfede2b33f69cd847907030f304ce656c49e33e7aeef38fc7902c"
 
       def install
         bin.install "sfeth"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/sf-ethereum/releases/download/v0.10.0-rc.3/sfeth_0.10.0-rc.3_macOS_arm64.tar.gz"
-      sha256 "343eee86fd3838d207fe2bf31b549cc4e44027c7ad037f216f22c8fb5fe85d7b"
+      url "https://github.com/streamingfast/sf-ethereum/releases/download/v0.10.0-rc.4/sf-ethereum_0.10.0-rc.4_macOS_arm64.tar.gz"
+      sha256 "354eb74f6ef7d91a785729d037039283036d11acf5af21b833d082eaac7872ba"
 
       def install
         bin.install "sfeth"
@@ -29,8 +29,8 @@ class SfEthereum < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/sf-ethereum/releases/download/v0.10.0-rc.3/sfeth_0.10.0-rc.3_linux_x86_64.tar.gz"
-      sha256 "b5b985cc4e9cf4f5aea38bcb5d46a0336ef968cd60a91ffad84fd6e4736f6260"
+      url "https://github.com/streamingfast/sf-ethereum/releases/download/v0.10.0-rc.4/sf-ethereum_0.10.0-rc.4_linux_x86_64.tar.gz"
+      sha256 "aede97646a807ae23873c547da3e2bae926e90604da8ec2a8ce6c1f056422131"
 
       def install
         bin.install "sfeth"
