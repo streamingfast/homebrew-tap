@@ -5,21 +5,21 @@
 class Substreams < Formula
   desc "StreamingFast Substreams CLI"
   homepage "https://github.com/streamingfast/substreams"
-  version "0.0.9-beta"
+  version "0.0.10-beta"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/substreams/releases/download/v0.0.9-beta/substreams_0.0.9-beta_macOS_arm64.tar.gz"
-      sha256 "85312a9f6a3881871ceb68aaa3edddec7c1c1126ff334a5ca47f7da8dc5715ac"
+      url "https://github.com/streamingfast/substreams/releases/download/v0.0.10-beta/substreams_0.0.10-beta_macOS_arm64.tar.gz"
+      sha256 "6f779c74d6b20bfd63e52425c166abdfa9eb637f4966cb248f75671aced97ebe"
 
       def install
         bin.install "substreams"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/substreams/releases/download/v0.0.9-beta/substreams_0.0.9-beta_macOS_x86_64.tar.gz"
-      sha256 "e6a0e95335a6446b9cee1d98e2d249e2e2aa56c762e9718cba63e4ee18e9bbe0"
+      url "https://github.com/streamingfast/substreams/releases/download/v0.0.10-beta/substreams_0.0.10-beta_macOS_x86_64.tar.gz"
+      sha256 "eee477eedea91b8e86db9044c4ae8617d2beed9f4f6eba05aeac8f39746a1ac6"
 
       def install
         bin.install "substreams"
@@ -29,8 +29,8 @@ class Substreams < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/substreams/releases/download/v0.0.9-beta/substreams_0.0.9-beta_linux_x86_64.tar.gz"
-      sha256 "389e6d89ed449a59fc770d990ab2109425d705463bfafd3a1bd93e8571396e78"
+      url "https://github.com/streamingfast/substreams/releases/download/v0.0.10-beta/substreams_0.0.10-beta_linux_x86_64.tar.gz"
+      sha256 "0c999655bd06de768483722ad3c78adebea802862de299d3773d27a92487fe03"
 
       def install
         bin.install "substreams"
