@@ -12,7 +12,15 @@ class Substreams < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/streamingfast/substreams/releases/download/v0.0.21/substreams_0.0.21_macOS_arm64.tar.gz"
-      sha256 "06f2b6726942c11c6d6c43194fa68751f9f2cd548cc92ba003f511cea6b55d10"
+      sha256 "10f161fa5d720816256921822357588aa68913cfad5766642c7909e5df8a0eb0"
+
+      def install
+        bin.install "substreams"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/streamingfast/substreams/releases/download/v0.0.21/substreams_0.0.21_macOS_x86_64.tar.gz"
+      sha256 "4e1e35bc2efb7045f40075797fb5f07d4b71709744709b73564bee0dc555f3bd"
 
       def install
         bin.install "substreams"
