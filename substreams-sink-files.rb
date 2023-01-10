@@ -5,21 +5,21 @@
 class SubstreamsSinkFiles < Formula
   desc "Substreams Sink tool to extract information to flat files"
   homepage "https://github.com/streamingfast/substreams-sink-files"
-  version "0.1.0"
+  version "0.2.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/substreams-sink-files/releases/download/v0.1.0/substreams-sink-files_0.1.0_macOS_arm64.tar.gz"
-      sha256 "269c2f4baaff2d3dbd60800497ddf6fc8a6a0b35ab0d8b9d760bd6f144698e4f"
+      url "https://github.com/streamingfast/substreams-sink-files/releases/download/v0.2.0/substreams-sink-files_0.2.0_macOS_arm64.tar.gz"
+      sha256 "3d83b37597f9d4108b6f8237c6839364db02906ba002c4f32df9596290658b49"
 
       def install
         bin.install "substreams-sink-files"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/substreams-sink-files/releases/download/v0.1.0/substreams-sink-files_0.1.0_macOS_x86_64.tar.gz"
-      sha256 "5fec33c8787b2b7dbfbb374bd32b22c558120cbbf31cc413b5bbb20c8030900c"
+      url "https://github.com/streamingfast/substreams-sink-files/releases/download/v0.2.0/substreams-sink-files_0.2.0_macOS_x86_64.tar.gz"
+      sha256 "6fd3ec356036d2683f24122f4ceab46611c6de61fa2efa1fe3c8da13c36f0cd3"
 
       def install
         bin.install "substreams-sink-files"
@@ -29,8 +29,8 @@ class SubstreamsSinkFiles < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/substreams-sink-files/releases/download/v0.1.0/substreams-sink-files_0.1.0_linux_x86_64.tar.gz"
-      sha256 "0ca214d463a06a0c0446b77776a0942e731f7e9ac5ab21630f87f0e0d192fe7e"
+      url "https://github.com/streamingfast/substreams-sink-files/releases/download/v0.2.0/substreams-sink-files_0.2.0_linux_x86_64.tar.gz"
+      sha256 "57545d7fa7969ef4ef360c44379c8cb5e10f9947e8b8c62bab16f757bfdd6ded"
 
       def install
         bin.install "substreams-sink-files"
