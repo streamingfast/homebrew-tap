@@ -5,21 +5,21 @@
 class FirehoseNear < Formula
   desc "Firehose on NEAR stack"
   homepage "https://github.com/streamingfast/firehose-near"
-  version "1.0.3"
+  version "1.0.4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/firehose-near/releases/download/v1.0.3/firenear_darwin_arm64.tar.gz"
-      sha256 "c538514abfcf7b87282cc9844ab5be47b56807a6df4650ae03008d6900011c60"
+      url "https://github.com/streamingfast/firehose-near/releases/download/v1.0.4/firenear_darwin_arm64.tar.gz"
+      sha256 "6af95d76037c7471bfa7c6c09413c5097d937879a4b1eaf147a4d985a999b7a0"
 
       def install
         bin.install "firenear"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/firehose-near/releases/download/v1.0.3/firenear_darwin_x86_64.tar.gz"
-      sha256 "17f8d2cfb336cfa38f78616ca786afc2fde0ce578429e66a0aa3f057642f3151"
+      url "https://github.com/streamingfast/firehose-near/releases/download/v1.0.4/firenear_darwin_x86_64.tar.gz"
+      sha256 "17756ea8e4aae42f876d6c2777a1ef60f490982f6b8f907fbd13991be216c4fd"
 
       def install
         bin.install "firenear"
@@ -29,8 +29,8 @@ class FirehoseNear < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/firehose-near/releases/download/v1.0.3/firenear_linux_x86_64.tar.gz"
-      sha256 "29ef5f6b0b03a0fe781f654ae8de9609a8522b9705ea6de7affff544b4d9f9c1"
+      url "https://github.com/streamingfast/firehose-near/releases/download/v1.0.4/firenear_linux_x86_64.tar.gz"
+      sha256 "6271aa217ceb11fbfbe73aa55415a764cadce35ca2629d2d272ffc4945cc8858"
 
       def install
         bin.install "firenear"
