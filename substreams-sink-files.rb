@@ -11,7 +11,7 @@ class SubstreamsSinkFiles < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/streamingfast/substreams-sink-files/releases/download/v1.0.0/substreams-sink-files_darwin_arm64.tar.gz"
-      sha256 "f3414d9fcdb921acb39bc95596512a906b4f39faed69425d27c7cd8cdc655701"
+      sha256 "032814fb0f0642fc53da10dad424e58a3809ab3e53dcab57b324cf2767d0e10b"
 
       def install
         bin.install "substreams-sink-files"
@@ -19,7 +19,7 @@ class SubstreamsSinkFiles < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/streamingfast/substreams-sink-files/releases/download/v1.0.0/substreams-sink-files_darwin_x86_64.tar.gz"
-      sha256 "d87605c6bc6c2511a059ba5d73315cbe3fbf8b3e1d24440f7ef58b44bb49eb61"
+      sha256 "777bb59f4e2964c553d7819dc4ca83e6dcd3370318a6ce826aac00b997eeceb9"
 
       def install
         bin.install "substreams-sink-files"
@@ -30,7 +30,7 @@ class SubstreamsSinkFiles < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/streamingfast/substreams-sink-files/releases/download/v1.0.0/substreams-sink-files_linux_x86_64.tar.gz"
-      sha256 "faf977b927de08f061382a26e907a4916d730df47f478980693f0e6a7cb637d7"
+      sha256 "2dba073bace80bd4a28dbc7a25c28d887d35b636507620a8bc7d7aa405d8ab19"
 
       def install
         bin.install "substreams-sink-files"
