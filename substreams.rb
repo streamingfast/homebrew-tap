@@ -5,21 +5,21 @@
 class Substreams < Formula
   desc "StreamingFast Substreams CLI"
   homepage "https://github.com/streamingfast/substreams"
-  version "1.1.2"
+  version "1.1.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/substreams/releases/download/v1.1.2/substreams_darwin_arm64.tar.gz"
-      sha256 "8bc120576f346238d3d42419a51965e9b82f09994f414d9bdd9072b6ec912cdb"
+      url "https://github.com/streamingfast/substreams/releases/download/v1.1.3/substreams_darwin_arm64.tar.gz"
+      sha256 "e966822ae827c1a1cbb6bfd20999fb39d24188d75c4366bcaec0500a32bfa22a"
 
       def install
         bin.install "substreams"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/substreams/releases/download/v1.1.2/substreams_darwin_x86_64.tar.gz"
-      sha256 "6fe4fd789ab991b883872175bcb4ce25c506746e1d8856ddf6217052fca1888d"
+      url "https://github.com/streamingfast/substreams/releases/download/v1.1.3/substreams_darwin_x86_64.tar.gz"
+      sha256 "adfa5929bfbcafab14ce412378e23c1c4d0e83898c09df18e210a51adb84c524"
 
       def install
         bin.install "substreams"
@@ -29,8 +29,8 @@ class Substreams < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/substreams/releases/download/v1.1.2/substreams_linux_x86_64.tar.gz"
-      sha256 "3ff7e441f580a147f123cd80cf0c559fc12264e8325e74d4049011a38725e6fb"
+      url "https://github.com/streamingfast/substreams/releases/download/v1.1.3/substreams_linux_x86_64.tar.gz"
+      sha256 "bcc08bc78fa266db03e23715c1cde252695dd58b79b1c1f05abcbff3950387f4"
 
       def install
         bin.install "substreams"
