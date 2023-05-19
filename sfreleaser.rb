@@ -5,21 +5,21 @@
 class Sfreleaser < Formula
   desc ""
   homepage "https://github.com/streamingfast/sfreleaser"
-  version "0.5.2"
+  version "0.5.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/sfreleaser/releases/download/v0.5.2/sfreleaser_darwin_arm64.tar.gz"
-      sha256 "adc6803ccd37aaa542e885da528c4fa2dc73df6fa53c5298516fae7e12ccf502"
+      url "https://github.com/streamingfast/sfreleaser/releases/download/v0.5.3/sfreleaser_darwin_arm64.tar.gz"
+      sha256 "adbb01837e3b83362f97c95f7b9c4a4e86dcbaa41db2d5719a67db05d8be965c"
 
       def install
         bin.install "sfreleaser"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/sfreleaser/releases/download/v0.5.2/sfreleaser_darwin_x86_64.tar.gz"
-      sha256 "9680a7af035b822b7476511c675b519fbecb5aefc84c21eec00909d57df9462d"
+      url "https://github.com/streamingfast/sfreleaser/releases/download/v0.5.3/sfreleaser_darwin_x86_64.tar.gz"
+      sha256 "6a2432ad7a0e448019940bd827b716e399384fdcb16bd47bf17aad1f379ad896"
 
       def install
         bin.install "sfreleaser"
@@ -29,8 +29,8 @@ class Sfreleaser < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/sfreleaser/releases/download/v0.5.2/sfreleaser_linux_x86_64.tar.gz"
-      sha256 "cac6b5f01ccf6cac921b0d558f6d318e6a7a095aa53ce0e3a0a425a7725f4e4d"
+      url "https://github.com/streamingfast/sfreleaser/releases/download/v0.5.3/sfreleaser_linux_x86_64.tar.gz"
+      sha256 "4f0a530691bb4319511a30c9d96fa2845ab21b9b7245f700394be0b4f335c4c2"
 
       def install
         bin.install "sfreleaser"
