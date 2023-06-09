@@ -5,21 +5,21 @@
 class SubstreamsSinkPostgres < Formula
   desc ""
   homepage "https://github.com/streamingfast/substreams-sink-postgres"
-  version "2.2.1"
+  version "2.3.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/substreams-sink-postgres/releases/download/v2.2.1/substreams-sink-postgres_darwin_arm64.tar.gz"
-      sha256 "49720311d390e85f9f804b4cd963f17f3012185cd0016aa34703aa88a1440995"
+      url "https://github.com/streamingfast/substreams-sink-postgres/releases/download/v2.3.0/substreams-sink-postgres_darwin_arm64.tar.gz"
+      sha256 "c8b5cc6aa07402e96dbc5fb85c48e949e2d2ba5550f6696f82c30d62e37a2a4f"
 
       def install
         bin.install "substreams-sink-postgres"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/substreams-sink-postgres/releases/download/v2.2.1/substreams-sink-postgres_darwin_x86_64.tar.gz"
-      sha256 "be34ca8cbdf53d7e5e75ae552a2309125fa214bb8ad4f1c5583f5a3da4eeb95b"
+      url "https://github.com/streamingfast/substreams-sink-postgres/releases/download/v2.3.0/substreams-sink-postgres_darwin_x86_64.tar.gz"
+      sha256 "791e6812636831fcde0ee8b45b45e8be3f0f7946c935d54dbce911df4c684213"
 
       def install
         bin.install "substreams-sink-postgres"
@@ -29,8 +29,8 @@ class SubstreamsSinkPostgres < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/substreams-sink-postgres/releases/download/v2.2.1/substreams-sink-postgres_linux_x86_64.tar.gz"
-      sha256 "1e15a8a17c837df5503c917ca28bca573f53afaff1404e4123d733bfdc61aa10"
+      url "https://github.com/streamingfast/substreams-sink-postgres/releases/download/v2.3.0/substreams-sink-postgres_linux_x86_64.tar.gz"
+      sha256 "163b5c77ebe61de35fb44326a2e80c950b160ee766a6287ec9e035c3829a839f"
 
       def install
         bin.install "substreams-sink-postgres"
