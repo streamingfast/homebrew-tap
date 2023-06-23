@@ -5,21 +5,21 @@
 class FirehoseEthereum < Formula
   desc ""
   homepage "https://github.com/streamingfast/firehose-ethereum"
-  version "1.4.6"
+  version "1.4.7"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/firehose-ethereum/releases/download/v1.4.6/firehose-ethereum_darwin_arm64.tar.gz"
-      sha256 "126b93464ee6cff494592873a2c8b39967f9b8360c6ff66cc4026a6b147e0aa9"
+      url "https://github.com/streamingfast/firehose-ethereum/releases/download/v1.4.7/firehose-ethereum_darwin_arm64.tar.gz"
+      sha256 "846ed0cafdbb7b86031bc17641394bb22bd157641f153bac937e493a8b3c2a9c"
 
       def install
         bin.install "fireeth"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/firehose-ethereum/releases/download/v1.4.6/firehose-ethereum_darwin_x86_64.tar.gz"
-      sha256 "effd01104a274a6018f829893c2f0cb08ae2047b7759fc981e03b5b08759b136"
+      url "https://github.com/streamingfast/firehose-ethereum/releases/download/v1.4.7/firehose-ethereum_darwin_x86_64.tar.gz"
+      sha256 "2e368c6a6cd380083ba40588d30246413c6cd017b16c9aa8a630906ef20225d1"
 
       def install
         bin.install "fireeth"
@@ -29,8 +29,8 @@ class FirehoseEthereum < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/firehose-ethereum/releases/download/v1.4.6/firehose-ethereum_linux_x86_64.tar.gz"
-      sha256 "d906ddfe5950d234c07d168ff8a1bbb820e2ca9da664f2fbace69d18b3072b76"
+      url "https://github.com/streamingfast/firehose-ethereum/releases/download/v1.4.7/firehose-ethereum_linux_x86_64.tar.gz"
+      sha256 "68fa7c63d1464f863cf51c2e51e4306df39b34809aefbfe2cec3f030f0cbc3e0"
 
       def install
         bin.install "fireeth"
