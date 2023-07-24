@@ -5,21 +5,21 @@
 class FirehoseNear < Formula
   desc ""
   homepage "https://github.com/streamingfast/firehose-near"
-  version "1.1.2"
+  version "1.1.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/firehose-near/releases/download/v1.1.2/firehose-near_darwin_arm64.tar.gz"
-      sha256 "4ede8b1c6ddffa342e9a1b4ae911d601559c72562a97954ddc6b3456a7a9f32f"
+      url "https://github.com/streamingfast/firehose-near/releases/download/v1.1.3/firehose-near_darwin_arm64.tar.gz"
+      sha256 "72a30d0af41470fc181ed7dd1d02e4e2a99e2e49d858a79f8243f356e64a80a6"
 
       def install
         bin.install "firenear"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/firehose-near/releases/download/v1.1.2/firehose-near_darwin_x86_64.tar.gz"
-      sha256 "5b5f222a01ff1cb4373e61c127955ce224676eb2be2734646e063543c9571271"
+      url "https://github.com/streamingfast/firehose-near/releases/download/v1.1.3/firehose-near_darwin_x86_64.tar.gz"
+      sha256 "14edc98880da479e3b790311bd648706367d3c518269ae54956911f3277ebcc8"
 
       def install
         bin.install "firenear"
@@ -28,9 +28,17 @@ class FirehoseNear < Formula
   end
 
   on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/streamingfast/firehose-near/releases/download/v1.1.3/firehose-near_linux_arm64.tar.gz"
+      sha256 "962928f11e987dcab00049990f30c9b7a2cfa604f8d1c6472cc2172c06bcd4b0"
+
+      def install
+        bin.install "firenear"
+      end
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/firehose-near/releases/download/v1.1.2/firehose-near_linux_x86_64.tar.gz"
-      sha256 "da6176718286f6b37611c4518d7329989f610eed48607a01fb3c90f0e59137c7"
+      url "https://github.com/streamingfast/firehose-near/releases/download/v1.1.3/firehose-near_linux_x86_64.tar.gz"
+      sha256 "52952b36284a00a2e7b53d81c9f91a120b3b6f36318d8ce8317df50c3ce0c978"
 
       def install
         bin.install "firenear"
