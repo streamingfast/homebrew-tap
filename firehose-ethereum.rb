@@ -5,21 +5,21 @@
 class FirehoseEthereum < Formula
   desc ""
   homepage "https://github.com/streamingfast/firehose-ethereum"
-  version "1.4.8"
+  version "1.4.9"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/firehose-ethereum/releases/download/v1.4.8/firehose-ethereum_darwin_arm64.tar.gz"
-      sha256 "324a60546d752720cbd9be699ad1e07a33a0aee07d57d0784c015b34694450a9"
+      url "https://github.com/streamingfast/firehose-ethereum/releases/download/v1.4.9/firehose-ethereum_darwin_arm64.tar.gz"
+      sha256 "ed34f28f7afd2c53046bfbb1f97fc5c0042ffc89f504dd41a6fff3b1c60ecc6b"
 
       def install
         bin.install "fireeth"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/firehose-ethereum/releases/download/v1.4.8/firehose-ethereum_darwin_x86_64.tar.gz"
-      sha256 "c7be4dcb2b450a642cedad9f900fd6a0b6555ba01649b9bd9bed497e09efacab"
+      url "https://github.com/streamingfast/firehose-ethereum/releases/download/v1.4.9/firehose-ethereum_darwin_x86_64.tar.gz"
+      sha256 "8973ba08280d18188a12b7303e5a0a8891f600f1e7674a41a6c179afcb12e9d3"
 
       def install
         bin.install "fireeth"
@@ -28,9 +28,17 @@ class FirehoseEthereum < Formula
   end
 
   on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/streamingfast/firehose-ethereum/releases/download/v1.4.9/firehose-ethereum_linux_arm64.tar.gz"
+      sha256 "88da9a597aebe3a75b29b6ce60bb22f9ce5e01fc7c2f500baacbda0a46bbdcd9"
+
+      def install
+        bin.install "fireeth"
+      end
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/firehose-ethereum/releases/download/v1.4.8/firehose-ethereum_linux_x86_64.tar.gz"
-      sha256 "0859243e41e3df7533c5264c8ac08a5aabb3ca19c02f0804af49ff63b142fb1b"
+      url "https://github.com/streamingfast/firehose-ethereum/releases/download/v1.4.9/firehose-ethereum_linux_x86_64.tar.gz"
+      sha256 "bfc6618ad3db6dfa5b886d6e1f40aeb83fb8376cbbff1304b8161df7436957a9"
 
       def install
         bin.install "fireeth"
