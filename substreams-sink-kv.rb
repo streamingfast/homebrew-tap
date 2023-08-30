@@ -5,21 +5,21 @@
 class SubstreamsSinkKv < Formula
   desc ""
   homepage "https://github.com/streamingfast/substreams-sink-kv"
-  version "2.1.5"
+  version "2.1.6"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/substreams-sink-kv/releases/download/v2.1.5/substreams-sink-kv_darwin_arm64.tar.gz"
-      sha256 "8fa6d084d423258a6968aa9f46288e2b0c3d262da48dbd97a9ae7ed56c6ca4f2"
+      url "https://github.com/streamingfast/substreams-sink-kv/releases/download/v2.1.6/substreams-sink-kv_darwin_arm64.tar.gz"
+      sha256 "a460e57ab9d9d02d1d4f54d04cbb1abd5d209e4fc6ef67778c6ba67952dc2a1d"
 
       def install
         bin.install "substreams-sink-kv"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/substreams-sink-kv/releases/download/v2.1.5/substreams-sink-kv_darwin_x86_64.tar.gz"
-      sha256 "a4d7f96d860a59a9b3df0ca7e384390909abcb17bb0fcf181443827485993799"
+      url "https://github.com/streamingfast/substreams-sink-kv/releases/download/v2.1.6/substreams-sink-kv_darwin_x86_64.tar.gz"
+      sha256 "a7e7234fc2e9f103a4c43a2523c6e8087ed941dfcc6347ebf63c6b3c25b4eb7f"
 
       def install
         bin.install "substreams-sink-kv"
@@ -28,9 +28,17 @@ class SubstreamsSinkKv < Formula
   end
 
   on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/streamingfast/substreams-sink-kv/releases/download/v2.1.6/substreams-sink-kv_linux_arm64.tar.gz"
+      sha256 "845d290724ed7696dcb2aabab1c4938762217a062e6cb618fd300c840f48ba5a"
+
+      def install
+        bin.install "substreams-sink-kv"
+      end
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/substreams-sink-kv/releases/download/v2.1.5/substreams-sink-kv_linux_x86_64.tar.gz"
-      sha256 "46e79ce86bd825291b7c555406ec5478a26c217920339f6980f6ed118680ff9f"
+      url "https://github.com/streamingfast/substreams-sink-kv/releases/download/v2.1.6/substreams-sink-kv_linux_x86_64.tar.gz"
+      sha256 "5b6c1cec351ce977063bb9ff6b476033a12ff4f8f211a05c677cd9f2a2dfcd33"
 
       def install
         bin.install "substreams-sink-kv"
