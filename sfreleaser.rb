@@ -5,21 +5,21 @@
 class Sfreleaser < Formula
   desc ""
   homepage "https://github.com/streamingfast/sfreleaser"
-  version "0.7.1"
+  version "0.7.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/sfreleaser/releases/download/v0.7.1/sfreleaser_darwin_arm64.tar.gz"
-      sha256 "13defaf3f2589720677b005dfbfc7783d9154b571d39e069f53f9fd48f7cf22d"
+      url "https://github.com/streamingfast/sfreleaser/releases/download/v0.7.2/sfreleaser_darwin_arm64.tar.gz"
+      sha256 "8a323b35399807650371a0e50a311c7255bac17ceb562758bf75cdb5a4c58174"
 
       def install
         bin.install "sfreleaser"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/sfreleaser/releases/download/v0.7.1/sfreleaser_darwin_x86_64.tar.gz"
-      sha256 "09e3343096ca6ffbdaa3cc320e0249a64563554ca820b9a87e6c0abe27801a0b"
+      url "https://github.com/streamingfast/sfreleaser/releases/download/v0.7.2/sfreleaser_darwin_x86_64.tar.gz"
+      sha256 "70006cf497a309c61603f0cf31de9d9b20d3ec9773f770de57acd80a623d8bb6"
 
       def install
         bin.install "sfreleaser"
@@ -29,16 +29,16 @@ class Sfreleaser < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/sfreleaser/releases/download/v0.7.1/sfreleaser_linux_arm64.tar.gz"
-      sha256 "b0995dccb378becaca3fac05a33c3c190379eec812e2bc47f9823f96484260bb"
+      url "https://github.com/streamingfast/sfreleaser/releases/download/v0.7.2/sfreleaser_linux_arm64.tar.gz"
+      sha256 "9248769c4a788999f0fca2599431412987dba26fc6faacaf3c7cad5b9811cceb"
 
       def install
         bin.install "sfreleaser"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/sfreleaser/releases/download/v0.7.1/sfreleaser_linux_x86_64.tar.gz"
-      sha256 "0d15a87748b979f36a4b2111f3be7de2d67801ed2fa18766a67ce7a2fcc683e0"
+      url "https://github.com/streamingfast/sfreleaser/releases/download/v0.7.2/sfreleaser_linux_x86_64.tar.gz"
+      sha256 "9d3f989935769bedee9e59e86a1ae29bdb9a0457951aa4833420b6fb93e367ff"
 
       def install
         bin.install "sfreleaser"
