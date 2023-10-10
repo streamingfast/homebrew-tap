@@ -11,7 +11,7 @@ class FirehoseSolana < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/streamingfast/firehose-solana/releases/download/v0.2.4/firehose-solana_darwin_arm64.tar.gz"
-      sha256 "be51624c5a1312bf494a43c54fc7f875328cac1f52829bffa27f095f7ddf66ef"
+      sha256 "f4c3b55f0b259810e5efc849f7dd9698a151807d802d92871bfd67ed8e733835"
 
       def install
         bin.install "firesol"
@@ -19,7 +19,7 @@ class FirehoseSolana < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/streamingfast/firehose-solana/releases/download/v0.2.4/firehose-solana_darwin_x86_64.tar.gz"
-      sha256 "3ef4bfdddcec160865618e855cabb3c9ec990c1ac6cdbe58f4d3d8c48f31f2c3"
+      sha256 "0e5670992745cc7bd441edd5a5229896c243e6067223d098575e8a24fa87b70d"
 
       def install
         bin.install "firesol"
@@ -30,7 +30,7 @@ class FirehoseSolana < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/streamingfast/firehose-solana/releases/download/v0.2.4/firehose-solana_linux_arm64.tar.gz"
-      sha256 "ce4e18489e3b66373147660b974e665959449a0a79edc45dd25abfe4d796bf25"
+      sha256 "e6ec9aadaca56bce3afdee97ae89444e334a1a321409de04a6eb330eee144fba"
 
       def install
         bin.install "firesol"
@@ -38,7 +38,7 @@ class FirehoseSolana < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/streamingfast/firehose-solana/releases/download/v0.2.4/firehose-solana_linux_x86_64.tar.gz"
-      sha256 "e44c9557373116a6616be7fa9325861a7e13962a1685f48624fa5ce98b7442f3"
+      sha256 "3089b937af4014545afc8cb83bcedae970ac5daca03f79ccd783e4058ff643d4"
 
       def install
         bin.install "firesol"
