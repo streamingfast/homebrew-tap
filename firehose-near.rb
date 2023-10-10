@@ -5,21 +5,21 @@
 class FirehoseNear < Formula
   desc ""
   homepage "https://github.com/streamingfast/firehose-near"
-  version "1.1.7"
+  version "1.1.8"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/firehose-near/releases/download/v1.1.7/firehose-near_darwin_arm64.tar.gz"
-      sha256 "3a0273817cb2f9a61c1eaed50d77416949908a3ecda5da8e490b0c012e4bd4be"
+      url "https://github.com/streamingfast/firehose-near/releases/download/v1.1.8/firehose-near_darwin_arm64.tar.gz"
+      sha256 "f8c32133ba1d7126bcfe2edf90e59cbafa501bca8433926cae17c23636adff87"
 
       def install
         bin.install "firenear"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/firehose-near/releases/download/v1.1.7/firehose-near_darwin_x86_64.tar.gz"
-      sha256 "d0dee428b9a9ec66a358b380726e5141beb9a48e78ebf4b28e182380e9a98888"
+      url "https://github.com/streamingfast/firehose-near/releases/download/v1.1.8/firehose-near_darwin_x86_64.tar.gz"
+      sha256 "59ee360b6eba37df031bbe20895df8e48b4598bba8a8e59159bb54880e9394cd"
 
       def install
         bin.install "firenear"
@@ -29,16 +29,16 @@ class FirehoseNear < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/firehose-near/releases/download/v1.1.7/firehose-near_linux_arm64.tar.gz"
-      sha256 "904384d4402e5ba67cc1d9eca6db32b15997d394444e01d6587fadd0b31fabe0"
+      url "https://github.com/streamingfast/firehose-near/releases/download/v1.1.8/firehose-near_linux_arm64.tar.gz"
+      sha256 "5e0bd2faa6fafce9959ed7775b16353f6a1557e3edf15cfe59c9f381bc8b3d3d"
 
       def install
         bin.install "firenear"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/firehose-near/releases/download/v1.1.7/firehose-near_linux_x86_64.tar.gz"
-      sha256 "a641f41497fec5a639ae070f86934007623fb5e474aba23da78a8d4cd8489c32"
+      url "https://github.com/streamingfast/firehose-near/releases/download/v1.1.8/firehose-near_linux_x86_64.tar.gz"
+      sha256 "5ee1e0fb6b6a067378e90afd02b34e6cf4ce6c57dc8794c9d0ce669a16cd3f6a"
 
       def install
         bin.install "firenear"
