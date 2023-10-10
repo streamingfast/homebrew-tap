@@ -5,21 +5,21 @@
 class FirehoseSolana < Formula
   desc ""
   homepage "https://github.com/streamingfast/firehose-solana"
-  version "0.2.3"
+  version "0.2.4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/firehose-solana/releases/download/v0.2.3/firehose-solana_darwin_arm64.tar.gz"
-      sha256 "46ac5e8af65411b3b65d495beca7e4367d99b618eff5d6985e2bedc3eaff911e"
+      url "https://github.com/streamingfast/firehose-solana/releases/download/v0.2.4/firehose-solana_darwin_arm64.tar.gz"
+      sha256 "a3ff6ec91f94dae2652c056e216c9be90b5ab2cc9113d508a606f670e4cef758"
 
       def install
         bin.install "firesol"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/firehose-solana/releases/download/v0.2.3/firehose-solana_darwin_x86_64.tar.gz"
-      sha256 "9e2d278df1093abf5dd0a1ed3aa04d38795bd82be60be7b2506ebeffb726e32a"
+      url "https://github.com/streamingfast/firehose-solana/releases/download/v0.2.4/firehose-solana_darwin_x86_64.tar.gz"
+      sha256 "b151f4e9a754a85311cc8e7d032c6be94cece5280a053810ad4180127508f804"
 
       def install
         bin.install "firesol"
@@ -29,16 +29,16 @@ class FirehoseSolana < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/firehose-solana/releases/download/v0.2.3/firehose-solana_linux_arm64.tar.gz"
-      sha256 "7a6b88175b65863c7cbce009ec9a68ef1ed085d987b9fb23c9258798bd983679"
+      url "https://github.com/streamingfast/firehose-solana/releases/download/v0.2.4/firehose-solana_linux_arm64.tar.gz"
+      sha256 "12d30173d2d91986ec6166044fc4efdf4b19480ed11a35525372567ae8c2a24d"
 
       def install
         bin.install "firesol"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/firehose-solana/releases/download/v0.2.3/firehose-solana_linux_x86_64.tar.gz"
-      sha256 "4a42623accb6438fc013ef974032dc9477e57721001da1b08f07266ce6312373"
+      url "https://github.com/streamingfast/firehose-solana/releases/download/v0.2.4/firehose-solana_linux_x86_64.tar.gz"
+      sha256 "b8233479669ad8b4c46986face0cae1ed3fac7e657e0037e17e747cd9d16a725"
 
       def install
         bin.install "firesol"
