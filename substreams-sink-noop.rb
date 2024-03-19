@@ -5,21 +5,21 @@
 class SubstreamsSinkNoop < Formula
   desc ""
   homepage "https://github.com/streamingfast/substreams-sink-noop"
-  version "1.1.3"
+  version "1.1.4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/substreams-sink-noop/releases/download/v1.1.3/substreams-sink-noop_darwin_arm64.tar.gz"
-      sha256 "5d4620e35aff4e942ac912bc485df98da8ab91cb5a4a235ea84821332e59bd73"
+      url "https://github.com/streamingfast/substreams-sink-noop/releases/download/v1.1.4/substreams-sink-noop_darwin_arm64.tar.gz"
+      sha256 "dbde2114ac40ee9c6df2e1bedcbcaa0af8446367004f415457e76465eb2889dc"
 
       def install
         bin.install "substreams-sink-noop"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/substreams-sink-noop/releases/download/v1.1.3/substreams-sink-noop_darwin_x86_64.tar.gz"
-      sha256 "fca240507c8d2df35524e74d5ca6f42b4c122643262ea53ead814ee858987389"
+      url "https://github.com/streamingfast/substreams-sink-noop/releases/download/v1.1.4/substreams-sink-noop_darwin_x86_64.tar.gz"
+      sha256 "4a4e7be1ddf5e1fe86eae35b8a78b13da30cc19f7da66b4e0dc4be4cdcc09b4e"
 
       def install
         bin.install "substreams-sink-noop"
@@ -29,16 +29,16 @@ class SubstreamsSinkNoop < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/substreams-sink-noop/releases/download/v1.1.3/substreams-sink-noop_linux_arm64.tar.gz"
-      sha256 "514d030b8e23f6fe7a31ec8d59fef20cb031f33864918356338785434dde04cb"
+      url "https://github.com/streamingfast/substreams-sink-noop/releases/download/v1.1.4/substreams-sink-noop_linux_arm64.tar.gz"
+      sha256 "9a5cf956541fd14ae45057fae295151294d7ff04c47b781b49d1af92e8cd2667"
 
       def install
         bin.install "substreams-sink-noop"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/substreams-sink-noop/releases/download/v1.1.3/substreams-sink-noop_linux_x86_64.tar.gz"
-      sha256 "2bcc26619f4cf5a4feb0731be0016bb461af0a24b2ff19d725df7a0ed960695a"
+      url "https://github.com/streamingfast/substreams-sink-noop/releases/download/v1.1.4/substreams-sink-noop_linux_x86_64.tar.gz"
+      sha256 "e507ce13b36a8b38a7790ca7f6b798bdfa90e7f1f1b236549fd376553c767573"
 
       def install
         bin.install "substreams-sink-noop"
