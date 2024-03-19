@@ -5,21 +5,21 @@
 class SubstreamsSinkSql < Formula
   desc ""
   homepage "https://github.com/streamingfast/substreams-sink-sql"
-  version "4.0.1"
+  version "4.0.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/substreams-sink-sql/releases/download/v4.0.1/substreams-sink-sql_darwin_arm64.tar.gz"
-      sha256 "81da38e85cdaa4971d243d9b973bb2021ae4067d91e7be9e14ac51970f341738"
+      url "https://github.com/streamingfast/substreams-sink-sql/releases/download/v4.0.2/substreams-sink-sql_darwin_arm64.tar.gz"
+      sha256 "f484a216513a5e4d55bc96fe786d887aa7bffd744c68ab5adadd985970ab645b"
 
       def install
         bin.install "substreams-sink-sql"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/substreams-sink-sql/releases/download/v4.0.1/substreams-sink-sql_darwin_x86_64.tar.gz"
-      sha256 "3c7ab1f70b5b994e30f16184329b31c92d12d56e8c61a681577345ea89029cce"
+      url "https://github.com/streamingfast/substreams-sink-sql/releases/download/v4.0.2/substreams-sink-sql_darwin_x86_64.tar.gz"
+      sha256 "b2029af48827d529be821eedcc60ca7c9fb3477e3549c2e7de6e8e578e4e9e4d"
 
       def install
         bin.install "substreams-sink-sql"
@@ -29,16 +29,16 @@ class SubstreamsSinkSql < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/substreams-sink-sql/releases/download/v4.0.1/substreams-sink-sql_linux_arm64.tar.gz"
-      sha256 "0b690f6d9a6e4ea0545daa5148cf3937cbc5b59b7a626da8c5ae11c1ae698588"
+      url "https://github.com/streamingfast/substreams-sink-sql/releases/download/v4.0.2/substreams-sink-sql_linux_arm64.tar.gz"
+      sha256 "a71420e9122e5f90d2d4e7f8e7edf3358a4a87d83ad922f5a6c60943d77c5224"
 
       def install
         bin.install "substreams-sink-sql"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/substreams-sink-sql/releases/download/v4.0.1/substreams-sink-sql_linux_x86_64.tar.gz"
-      sha256 "acd6688d3322f124440d6a0526d7d82578e1c836c333c00f6deb77191e920249"
+      url "https://github.com/streamingfast/substreams-sink-sql/releases/download/v4.0.2/substreams-sink-sql_linux_x86_64.tar.gz"
+      sha256 "7e000841f528eecf5b51cbcd36701f6dcb1961b70693cc18377db59077b3a7e3"
 
       def install
         bin.install "substreams-sink-sql"
