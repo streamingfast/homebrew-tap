@@ -11,7 +11,7 @@ class Substreams < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/streamingfast/substreams/releases/download/v1.5.0/substreams_darwin_arm64.tar.gz"
-      sha256 "c99e235d73a6a4a813de1515a56e51b59724f9d5c6dde82a707645d2b1c6b969"
+      sha256 "710b4284ca21d20964e7a49543cf8c38bb557506b2d5dc1ab1e73642f525fbb2"
 
       def install
         bin.install "substreams"
@@ -19,7 +19,7 @@ class Substreams < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/streamingfast/substreams/releases/download/v1.5.0/substreams_darwin_x86_64.tar.gz"
-      sha256 "530893e85de50c45ec4d714e1c8526044619679d9c42cb53bd6e83c2ac7d6cfc"
+      sha256 "fe8b3dbf0bd45ab46d0591a2244395ca71ae27807fb1c13452f8bd44aee9cd9a"
 
       def install
         bin.install "substreams"
@@ -30,7 +30,7 @@ class Substreams < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/streamingfast/substreams/releases/download/v1.5.0/substreams_linux_arm64.tar.gz"
-      sha256 "96d12b206827347f9cb1ef3798f2c78b83b6c55e1b2311677ef4e36c04314da6"
+      sha256 "4bb4f55cc60b26d0a7eb00d8955595a9756f453cba12be6e632491eefb90749d"
 
       def install
         bin.install "substreams"
@@ -38,7 +38,7 @@ class Substreams < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/streamingfast/substreams/releases/download/v1.5.0/substreams_linux_x86_64.tar.gz"
-      sha256 "e932c19e41d728126e875ad49d5c6be4dbe14d624232b78efdc0ddc7a5aab48f"
+      sha256 "360dba81c07ba9fa29006d859ccc95ff2855f4fdb8c4332831e66531fa92b325"
 
       def install
         bin.install "substreams"
