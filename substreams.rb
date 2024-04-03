@@ -5,21 +5,21 @@
 class Substreams < Formula
   desc ""
   homepage "https://github.com/streamingfast/substreams"
-  version "1.5.0"
+  version "1.5.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/substreams/releases/download/v1.5.0/substreams_darwin_arm64.tar.gz"
-      sha256 "710b4284ca21d20964e7a49543cf8c38bb557506b2d5dc1ab1e73642f525fbb2"
+      url "https://github.com/streamingfast/substreams/releases/download/v1.5.1/substreams_darwin_arm64.tar.gz"
+      sha256 "0ff732d9cb02f15971abf6fe4082f7d7dc082fd172118e24aefa72671c7302cf"
 
       def install
         bin.install "substreams"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/substreams/releases/download/v1.5.0/substreams_darwin_x86_64.tar.gz"
-      sha256 "fe8b3dbf0bd45ab46d0591a2244395ca71ae27807fb1c13452f8bd44aee9cd9a"
+      url "https://github.com/streamingfast/substreams/releases/download/v1.5.1/substreams_darwin_x86_64.tar.gz"
+      sha256 "ceb12a194c5a164921ccd0137a8eb43b6672254f3c2590aea72fa01920bbcc9a"
 
       def install
         bin.install "substreams"
@@ -29,16 +29,16 @@ class Substreams < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/substreams/releases/download/v1.5.0/substreams_linux_arm64.tar.gz"
-      sha256 "4bb4f55cc60b26d0a7eb00d8955595a9756f453cba12be6e632491eefb90749d"
+      url "https://github.com/streamingfast/substreams/releases/download/v1.5.1/substreams_linux_arm64.tar.gz"
+      sha256 "c56664444c81e46d1c6d78ed554d0f92bcc6e10a39af4243759fcccb52ae6183"
 
       def install
         bin.install "substreams"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/substreams/releases/download/v1.5.0/substreams_linux_x86_64.tar.gz"
-      sha256 "360dba81c07ba9fa29006d859ccc95ff2855f4fdb8c4332831e66531fa92b325"
+      url "https://github.com/streamingfast/substreams/releases/download/v1.5.1/substreams_linux_x86_64.tar.gz"
+      sha256 "fd9dbea0c1ed001bbf2ca2e4c6228e840229c71c71dc9ba219ed364e8dd15d7e"
 
       def install
         bin.install "substreams"
