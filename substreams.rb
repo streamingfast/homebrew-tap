@@ -5,21 +5,21 @@
 class Substreams < Formula
   desc ""
   homepage "https://github.com/streamingfast/substreams"
-  version "1.6.2"
+  version "1.7.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/substreams/releases/download/v1.6.2/substreams_darwin_x86_64.tar.gz"
-      sha256 "6ed2fc5c090367b2ffb9ed493b23c7d15b50f1cf4b935d69e5ab4c081ca35b64"
+      url "https://github.com/streamingfast/substreams/releases/download/v1.7.0/substreams_darwin_x86_64.tar.gz"
+      sha256 "9d8ece16392703bbaef52b9d52d301d0313702a56d22371aae45cda22893e57f"
 
       def install
         bin.install "substreams"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/substreams/releases/download/v1.6.2/substreams_darwin_arm64.tar.gz"
-      sha256 "1fbd5efa0f6d87c5ec893d29c1ed982217dd3fec9b914cb498853a501a75384a"
+      url "https://github.com/streamingfast/substreams/releases/download/v1.7.0/substreams_darwin_arm64.tar.gz"
+      sha256 "6168e068541929250662f483d12f398748264492759188fd5cb92b43419de6cf"
 
       def install
         bin.install "substreams"
@@ -29,16 +29,16 @@ class Substreams < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/substreams/releases/download/v1.6.2/substreams_linux_x86_64.tar.gz"
-      sha256 "e157225cd0d9e9f097e1b5869b4a3832fdb5bfaf55ccba0a349798265327b8af"
+      url "https://github.com/streamingfast/substreams/releases/download/v1.7.0/substreams_linux_x86_64.tar.gz"
+      sha256 "e37af54a8fb285c28ca5cc1360b9d044982c1656508d7242e0eedaab440640b5"
 
       def install
         bin.install "substreams"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/substreams/releases/download/v1.6.2/substreams_linux_arm64.tar.gz"
-      sha256 "01cc720472c4d71c44b4f22a020be0e55abe0a45269500ea78f65c7909e6c511"
+      url "https://github.com/streamingfast/substreams/releases/download/v1.7.0/substreams_linux_arm64.tar.gz"
+      sha256 "f8af2f882af1cbb9732bcbd0530234772d082d664516b8436ee49369995109b0"
 
       def install
         bin.install "substreams"
