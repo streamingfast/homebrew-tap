@@ -5,21 +5,21 @@
 class SubstreamsSinkNoop < Formula
   desc ""
   homepage "https://github.com/streamingfast/substreams-sink-noop"
-  version "1.1.5"
+  version "1.1.6"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/substreams-sink-noop/releases/download/v1.1.5/substreams-sink-noop_darwin_x86_64.tar.gz"
-      sha256 "4f1b19ee051b56a858663306d9d09ed6fa90f642569945b28f858d43c5fb6066"
+    if Hardware::CPU.arm?
+      url "https://github.com/streamingfast/substreams-sink-noop/releases/download/v1.1.6/substreams-sink-noop_darwin_arm64.tar.gz"
+      sha256 "4b58b94bfdb6bcd12ae9988e0623773d221e3e344d84d81ed57eaf07e82d0937"
 
       def install
         bin.install "substreams-sink-noop"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/substreams-sink-noop/releases/download/v1.1.5/substreams-sink-noop_darwin_arm64.tar.gz"
-      sha256 "f9464a8aa4f88cb0fa434b7d07fdbe09a8ab7518efe4680ac4e6d7c65e0850cc"
+    if Hardware::CPU.intel?
+      url "https://github.com/streamingfast/substreams-sink-noop/releases/download/v1.1.6/substreams-sink-noop_darwin_x86_64.tar.gz"
+      sha256 "c7b0a56e9efd334b1af95ac5eb177a82c2d0cc616ee9f270bf0605ca5ee7f564"
 
       def install
         bin.install "substreams-sink-noop"
@@ -28,17 +28,17 @@ class SubstreamsSinkNoop < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/substreams-sink-noop/releases/download/v1.1.5/substreams-sink-noop_linux_x86_64.tar.gz"
-      sha256 "d96f34cdb9033b7686f3636df1d8bb0c88e62a5defddf1965bf8acb8dcc5987e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/streamingfast/substreams-sink-noop/releases/download/v1.1.6/substreams-sink-noop_linux_arm64.tar.gz"
+      sha256 "7bb0ee4379ca525835833a7594eefe84446ad4a2d1b1e41fa5c4a4055566476f"
 
       def install
         bin.install "substreams-sink-noop"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/substreams-sink-noop/releases/download/v1.1.5/substreams-sink-noop_linux_arm64.tar.gz"
-      sha256 "a13f648eb96f2d7ea7e1fdc0e07b98ca3957b696693368c55b538d85ede35e43"
+    if Hardware::CPU.intel?
+      url "https://github.com/streamingfast/substreams-sink-noop/releases/download/v1.1.6/substreams-sink-noop_linux_x86_64.tar.gz"
+      sha256 "931692fe1ba5bdb790ef5a381eff9c8096c841f91ddc5f44673274d8f5b9ead0"
 
       def install
         bin.install "substreams-sink-noop"
