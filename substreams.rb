@@ -5,21 +5,21 @@
 class Substreams < Formula
   desc ""
   homepage "https://github.com/streamingfast/substreams"
-  version "1.10.9"
+  version "1.10.10"
   license "Apache-2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/streamingfast/substreams/releases/download/v1.10.9/substreams_darwin_x86_64.tar.gz"
-      sha256 "0721bd716184b96fb6498d36f24a8453bbbf9fe5f198b58442fbca4bac3c7a4c"
+      url "https://github.com/streamingfast/substreams/releases/download/v1.10.10/substreams_darwin_x86_64.tar.gz"
+      sha256 "a8ccc516e321b1882421ad73de7ff17771e599445f215f58a9fe0f61eaf98a8d"
 
       def install
         bin.install "substreams"
       end
     end
     on_arm do
-      url "https://github.com/streamingfast/substreams/releases/download/v1.10.9/substreams_darwin_arm64.tar.gz"
-      sha256 "bf561abe358c9fe4312dd7ecb1c509367577029cc95adaaf1a9c9372b657a7ef"
+      url "https://github.com/streamingfast/substreams/releases/download/v1.10.10/substreams_darwin_arm64.tar.gz"
+      sha256 "5f8daed76c670e4a7bb3703d9855ab522bdc14c549c2bbe302d64f281dd21c7c"
 
       def install
         bin.install "substreams"
@@ -30,8 +30,8 @@ class Substreams < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/streamingfast/substreams/releases/download/v1.10.9/substreams_linux_x86_64.tar.gz"
-        sha256 "279c0991be63028def8c72c8372e0e268cbcf589e1e49ef79761a01f452b2a3e"
+        url "https://github.com/streamingfast/substreams/releases/download/v1.10.10/substreams_linux_x86_64.tar.gz"
+        sha256 "0aaf0e799edd51c60a78b048cc7066f7ff76622b50b0a151572a7e6354dea223"
 
         def install
           bin.install "substreams"
@@ -40,8 +40,8 @@ class Substreams < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/streamingfast/substreams/releases/download/v1.10.9/substreams_linux_arm64.tar.gz"
-        sha256 "a5f548f4929ee4c7c990891c83458be81c386dd3e45ebed4c4ca7034b257ba22"
+        url "https://github.com/streamingfast/substreams/releases/download/v1.10.10/substreams_linux_arm64.tar.gz"
+        sha256 "3d59221b93f43e9efd432d5fd6dc262e09d902ff755fad1e8772e09a65bcc1db"
 
         def install
           bin.install "substreams"
