@@ -5,21 +5,21 @@
 class SubstreamsSinkKv < Formula
   desc ""
   homepage "https://github.com/streamingfast/substreams-sink-kv"
-  version "2.2.0"
+  version "2.3.0"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/substreams-sink-kv/releases/download/v2.2.0/substreams-sink-kv_darwin_arm64.tar.gz"
-      sha256 "96ab864a205f99251ef5a3fc52c362cdc5fef7f7f5097a9911d5367b5d004775"
+    on_intel do
+      url "https://github.com/streamingfast/substreams-sink-kv/releases/download/v2.3.0/substreams-sink-kv_darwin_x86_64.tar.gz"
+      sha256 "68d9924ce868a45bfdd8f4bd38b6affa436cd9885c69185b8c5777fe05908f45"
 
       def install
         bin.install "substreams-sink-kv"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/substreams-sink-kv/releases/download/v2.2.0/substreams-sink-kv_darwin_x86_64.tar.gz"
-      sha256 "67c3ce7407d2ec7627f17cedadb4a2879e62559bb2668a07c86905b91bda53fd"
+    on_arm do
+      url "https://github.com/streamingfast/substreams-sink-kv/releases/download/v2.3.0/substreams-sink-kv_darwin_arm64.tar.gz"
+      sha256 "bd1deb016baf6e8ddd6ba07e556c9a0bc88e9ef46904f45717b1ddf036deff16"
 
       def install
         bin.install "substreams-sink-kv"
@@ -28,20 +28,24 @@ class SubstreamsSinkKv < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/substreams-sink-kv/releases/download/v2.2.0/substreams-sink-kv_linux_arm64.tar.gz"
-      sha256 "39c974d2179d6b7abbeb8ba4212131fdb6133ff1fb829d56931e0c12b445fb63"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/streamingfast/substreams-sink-kv/releases/download/v2.3.0/substreams-sink-kv_linux_x86_64.tar.gz"
+        sha256 "ff77466af1be96364679ad32ef8a55ab9965b93e598e63559cfe6a957781c39b"
 
-      def install
-        bin.install "substreams-sink-kv"
+        def install
+          bin.install "substreams-sink-kv"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/substreams-sink-kv/releases/download/v2.2.0/substreams-sink-kv_linux_x86_64.tar.gz"
-      sha256 "d1d8c3b4c8fcda1764a5b7459a2c1b496a74e39bccd4e54d3ead1056f171cad0"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/streamingfast/substreams-sink-kv/releases/download/v2.3.0/substreams-sink-kv_linux_arm64.tar.gz"
+        sha256 "84bdc54365f82724851e3f6b04dd59eb51d25fe9ee10d7e2522504a5df5a7e41"
 
-      def install
-        bin.install "substreams-sink-kv"
+        def install
+          bin.install "substreams-sink-kv"
+        end
       end
     end
   end
