@@ -5,21 +5,21 @@
 class SubstreamsSinkMongodb < Formula
   desc ""
   homepage "https://github.com/streamingfast/substreams-sink-mongodb"
-  version "2.0.1"
+  version "2.1.0"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/substreams-sink-mongodb/releases/download/v2.0.1/substreams-sink-mongodb_darwin_arm64.tar.gz"
-      sha256 "ea9fadbf9bf7a581d152760ee07ddb0b5d5df7d5e558c0cfcf83880a5fca0e5b"
+    on_intel do
+      url "https://github.com/streamingfast/substreams-sink-mongodb/releases/download/v2.1.0/substreams-sink-mongodb_darwin_x86_64.tar.gz"
+      sha256 "3763d1142d4ed137d3c75afaa3a8ce7180853c9a05a5369aebb0fbee2ce98551"
 
       def install
         bin.install "substreams-sink-mongodb"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/substreams-sink-mongodb/releases/download/v2.0.1/substreams-sink-mongodb_darwin_x86_64.tar.gz"
-      sha256 "fd9a99f4de595cb15a3c8fad5eeef7ad9f5ae38b834a3e9c0683c158e1b80edc"
+    on_arm do
+      url "https://github.com/streamingfast/substreams-sink-mongodb/releases/download/v2.1.0/substreams-sink-mongodb_darwin_arm64.tar.gz"
+      sha256 "c2fa077beeb206a1ba9aebcf32eba6d8028f6dcd3c4a96fb1bb51d5e2c574662"
 
       def install
         bin.install "substreams-sink-mongodb"
@@ -28,20 +28,24 @@ class SubstreamsSinkMongodb < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/substreams-sink-mongodb/releases/download/v2.0.1/substreams-sink-mongodb_linux_arm64.tar.gz"
-      sha256 "b36226b2385d4d997eab439d83d30db29d8f29858df221f84a75a22647dde459"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/streamingfast/substreams-sink-mongodb/releases/download/v2.1.0/substreams-sink-mongodb_linux_x86_64.tar.gz"
+        sha256 "accf9b5c4811242b8ee4bedf150a42512b6c0143ccb40b3840af3442c4c4e99b"
 
-      def install
-        bin.install "substreams-sink-mongodb"
+        def install
+          bin.install "substreams-sink-mongodb"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/substreams-sink-mongodb/releases/download/v2.0.1/substreams-sink-mongodb_linux_x86_64.tar.gz"
-      sha256 "d52342e6b4604981ff615b43834aa6e5e76a580dc1c44110df0b310c87bf4c96"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/streamingfast/substreams-sink-mongodb/releases/download/v2.1.0/substreams-sink-mongodb_linux_arm64.tar.gz"
+        sha256 "5ae6c17f932f6862713a77fee801984fa9391aff0c9f2b7199908dc83c3a5c21"
 
-      def install
-        bin.install "substreams-sink-mongodb"
+        def install
+          bin.install "substreams-sink-mongodb"
+        end
       end
     end
   end
