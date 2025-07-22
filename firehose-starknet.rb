@@ -5,21 +5,21 @@
 class FirehoseStarknet < Formula
   desc ""
   homepage "https://github.com/streamingfast/firehose-starknet"
-  version "1.0.0"
+  version "1.1.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/firehose-starknet/releases/download/v1.0.0/firehose-starknet_darwin_x86_64.tar.gz"
-      sha256 "62f38c659ba66e3f43aa1ae363473a6863546b82e27ccca1327dcabb717eca44"
+      url "https://github.com/streamingfast/firehose-starknet/releases/download/v1.1.0/firehose-starknet_darwin_x86_64.tar.gz"
+      sha256 "d5ada0694e9aeb697a79c174b4df29921726316190744acda1db268e72e4ae2d"
 
       def install
         bin.install "firestarknet"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/firehose-starknet/releases/download/v1.0.0/firehose-starknet_darwin_arm64.tar.gz"
-      sha256 "5bbf111495ecb54657e43d4a57c4e164681d1cdba9df26f923d0398a7adae2ea"
+      url "https://github.com/streamingfast/firehose-starknet/releases/download/v1.1.0/firehose-starknet_darwin_arm64.tar.gz"
+      sha256 "044decd20d240bbdd8befaf979776749ac6999b3be5b15c50448d5cfc3cd231b"
 
       def install
         bin.install "firestarknet"
@@ -28,24 +28,18 @@ class FirehoseStarknet < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/streamingfast/firehose-starknet/releases/download/v1.0.0/firehose-starknet_linux_x86_64.tar.gz"
-        sha256 "e753b8df3fef627c83c228646fbf36302c470a87140130890142a8a92f35034c"
-
-        def install
-          bin.install "firestarknet"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/streamingfast/firehose-starknet/releases/download/v1.1.0/firehose-starknet_linux_x86_64.tar.gz"
+      sha256 "f4f88ce36ecfb9d07e39ea47e097b436941100ad42639bee617f1c60af5bfbc2"
+      def install
+        bin.install "firestarknet"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/streamingfast/firehose-starknet/releases/download/v1.0.0/firehose-starknet_linux_arm64.tar.gz"
-        sha256 "3134f6b9e35cbd0e189e3735d12900d775196394059de48ac05277cbcc9ef44b"
-
-        def install
-          bin.install "firestarknet"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/streamingfast/firehose-starknet/releases/download/v1.1.0/firehose-starknet_linux_arm64.tar.gz"
+      sha256 "c10a73bb45a58a09768adf9faa082859df37616afb624af01a461ed3cb3f764b"
+      def install
+        bin.install "firestarknet"
       end
     end
   end
