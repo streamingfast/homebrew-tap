@@ -5,21 +5,21 @@
 class SubstreamsFoundationalStore < Formula
   desc ""
   homepage "https://github.com/streamingfast/substreams-foundational-store"
-  version "0.2.0"
+  version "0.2.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/substreams-foundational-store/releases/download/v0.2.0/substreams-foundational-store_darwin_x86_64.tar.gz"
-      sha256 "ee01105feeb894c002d95535e95374b9f31d79ec38682c84b2aa195951ceb020"
+      url "https://github.com/streamingfast/substreams-foundational-store/releases/download/v0.2.1/substreams-foundational-store_darwin_x86_64.tar.gz"
+      sha256 "77b52685901e1ba376956652810452d84e4b9f6d6a5f2977787e48f42e62ef4c"
 
       def install
         bin.install "foundational-store"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/substreams-foundational-store/releases/download/v0.2.0/substreams-foundational-store_darwin_arm64.tar.gz"
-      sha256 "8c483c3a53b27e335d0771ba5de4ebbf03d3b376bbdf37bd11e20e37f3dc6e23"
+      url "https://github.com/streamingfast/substreams-foundational-store/releases/download/v0.2.1/substreams-foundational-store_darwin_arm64.tar.gz"
+      sha256 "764f6e6002feee65436520a9fc7a7e462b9940719b120a8f6190c5a1d2a8965a"
 
       def install
         bin.install "foundational-store"
@@ -29,15 +29,15 @@ class SubstreamsFoundationalStore < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/substreams-foundational-store/releases/download/v0.2.0/substreams-foundational-store_linux_x86_64.tar.gz"
-      sha256 "bef5fb56f5edb5b9c58c5a00d073bde04286c8a57104b91764ca85296fcdc9c8"
+      url "https://github.com/streamingfast/substreams-foundational-store/releases/download/v0.2.1/substreams-foundational-store_linux_x86_64.tar.gz"
+      sha256 "169acad0c35cadcd50f2c629ef84d73842182715ce1e6000865977de063bead4"
       def install
         bin.install "foundational-store"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/substreams-foundational-store/releases/download/v0.2.0/substreams-foundational-store_linux_arm64.tar.gz"
-      sha256 "3f366f244b107c192623512a0608b2906261d3fd09f28f6d06909fa31fa1e67b"
+      url "https://github.com/streamingfast/substreams-foundational-store/releases/download/v0.2.1/substreams-foundational-store_linux_arm64.tar.gz"
+      sha256 "f4512e3b10ac979f697ec5791b2b061b5796ab29a878ebec46df77c815c70e60"
       def install
         bin.install "foundational-store"
       end
