@@ -5,21 +5,21 @@
 class SubstreamsSinkFiles < Formula
   desc ""
   homepage "https://github.com/streamingfast/substreams-sink-files"
-  version "3.0.0"
+  version "2.3.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/substreams-sink-files/releases/download/v3.0.0/substreams-sink-files_darwin_x86_64.tar.gz"
-      sha256 "084a60978d9fd0127192d58d1573d5a63e885ae751c2dde669503708bd42764e"
+      url "https://github.com/streamingfast/substreams-sink-files/releases/download/v2.3.1/substreams-sink-files_darwin_x86_64.tar.gz"
+      sha256 "026973969c15239769eb2c996b7721fc2436c59553790face6d67b62cbf867b9"
 
       def install
         bin.install "substreams-sink-files"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/substreams-sink-files/releases/download/v3.0.0/substreams-sink-files_darwin_arm64.tar.gz"
-      sha256 "cf0ce69532a3c4cffa2a51f4f45edbcefe1952e6baeab83176ed485e0add83af"
+      url "https://github.com/streamingfast/substreams-sink-files/releases/download/v2.3.1/substreams-sink-files_darwin_arm64.tar.gz"
+      sha256 "253117c9f4f3a9d38b788f68f68b76d24b3207942615eac7f850da25dfeb218f"
 
       def install
         bin.install "substreams-sink-files"
@@ -30,8 +30,8 @@ class SubstreamsSinkFiles < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/streamingfast/substreams-sink-files/releases/download/v3.0.0/substreams-sink-files_linux_x86_64.tar.gz"
-        sha256 "5d2ad7475974457c9348bdfa608f785f42965017e61e633dbf80bdf4d2df0eab"
+        url "https://github.com/streamingfast/substreams-sink-files/releases/download/v2.3.1/substreams-sink-files_linux_x86_64.tar.gz"
+        sha256 "bea162605499bc1c225325a6b43a7a044c011a896840131a79e54988cba99ce7"
 
         def install
           bin.install "substreams-sink-files"
@@ -40,8 +40,8 @@ class SubstreamsSinkFiles < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/streamingfast/substreams-sink-files/releases/download/v3.0.0/substreams-sink-files_linux_arm64.tar.gz"
-        sha256 "3f017c2cbe8d9bf80a43cff0126a53769b5e8ace3c4df151f60b1ab34312e62d"
+        url "https://github.com/streamingfast/substreams-sink-files/releases/download/v2.3.1/substreams-sink-files_linux_arm64.tar.gz"
+        sha256 "1a3f992e210f540bc7301024e977cdc268f391c9e5f4ec7d8297e19cbdb8bb18"
 
         def install
           bin.install "substreams-sink-files"
