@@ -5,21 +5,21 @@
 class FirehoseStellar < Formula
   desc ""
   homepage "https://github.com/streamingfast/firehose-stellar"
-  version "1.0.3"
+  version "1.0.4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/firehose-stellar/releases/download/v1.0.3/firehose-stellar_darwin_x86_64.tar.gz"
-      sha256 "d53a9e28c352519e5e322f702ebcef633c0907a259c9d31acdd8254619e1d505"
+      url "https://github.com/streamingfast/firehose-stellar/releases/download/v1.0.4/firehose-stellar_darwin_x86_64.tar.gz"
+      sha256 "ca8af66800c5a0f5d8378ed6b7574e0f9fe331d9aac6036536b4b829bd437a44"
 
       def install
         bin.install "firestellar"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/firehose-stellar/releases/download/v1.0.3/firehose-stellar_darwin_arm64.tar.gz"
-      sha256 "1e966be6eef37b0c232316f1f89e59ab57b76f1e02b2896212be788512c9b7cd"
+      url "https://github.com/streamingfast/firehose-stellar/releases/download/v1.0.4/firehose-stellar_darwin_arm64.tar.gz"
+      sha256 "79291c75cd7c7127219632b519e821c1cf73e4cb81fa3064df5249506bf70d08"
 
       def install
         bin.install "firestellar"
@@ -29,15 +29,15 @@ class FirehoseStellar < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/firehose-stellar/releases/download/v1.0.3/firehose-stellar_linux_x86_64.tar.gz"
-      sha256 "2c97615473421bc9ae7a75049a69c1736481127b43a880cb27f22938d9f43f1e"
+      url "https://github.com/streamingfast/firehose-stellar/releases/download/v1.0.4/firehose-stellar_linux_x86_64.tar.gz"
+      sha256 "2c06a6031e4d038c9b606ccc74fa66d51dfc3cd1819e4b545eeab0b27e7679e1"
       def install
         bin.install "firestellar"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/firehose-stellar/releases/download/v1.0.3/firehose-stellar_linux_arm64.tar.gz"
-      sha256 "9189773d3705261a3d595ee2b8ebc5a0f14c9c53910b056c2b1ab9e586020c32"
+      url "https://github.com/streamingfast/firehose-stellar/releases/download/v1.0.4/firehose-stellar_linux_arm64.tar.gz"
+      sha256 "f77e40b0790275d8e7421dc3dfb15ba6b20edde96bf851e40efab8443965eeb7"
       def install
         bin.install "firestellar"
       end
