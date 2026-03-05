@@ -5,21 +5,21 @@
 class Sbox < Formula
   desc ""
   homepage "https://github.com/streamingfast/sbox"
-  version "1.3.3"
+  version "1.4.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/sbox/releases/download/v1.3.3/sbox_darwin_x86_64.tar.gz"
-      sha256 "ec08e7bb35573203e500a20a998b3f03db0a8d77a5c4f7cac600aa6062b1dda3"
+      url "https://github.com/streamingfast/sbox/releases/download/v1.4.0/sbox_darwin_x86_64.tar.gz"
+      sha256 "006bbaa60c5ec17372a9540e198e7621f3fa9fa2b9d3c8c5d9647dfbe94d0ec2"
 
       def install
         bin.install "sbox"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/sbox/releases/download/v1.3.3/sbox_darwin_arm64.tar.gz"
-      sha256 "db9c41f85ef20ad3f215d140b1163d234c1850052bff4ac952e3cce0a9ef4cc8"
+      url "https://github.com/streamingfast/sbox/releases/download/v1.4.0/sbox_darwin_arm64.tar.gz"
+      sha256 "0601fa94db9be6a28f77eea2f3a6712f8edca0e92b7b675849aee3965c18f183"
 
       def install
         bin.install "sbox"
@@ -29,15 +29,15 @@ class Sbox < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/sbox/releases/download/v1.3.3/sbox_linux_x86_64.tar.gz"
-      sha256 "e6fa89ed2b9b3d25d9d0372b9c977129ffaec24610ba3aa862ec812c83baab36"
+      url "https://github.com/streamingfast/sbox/releases/download/v1.4.0/sbox_linux_x86_64.tar.gz"
+      sha256 "93cb1ca2134d75742feaa7a43b3ed7b7d601b01606811abce8f37c39502b5d0d"
       def install
         bin.install "sbox"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/sbox/releases/download/v1.3.3/sbox_linux_arm64.tar.gz"
-      sha256 "2937bd39cc16622c744a512fd512bbfb24556d98bf5bd98cb4e04b359d94e712"
+      url "https://github.com/streamingfast/sbox/releases/download/v1.4.0/sbox_linux_arm64.tar.gz"
+      sha256 "85161a5630d6e177b39279151c4f0dc145f4c5a3f976ee599f82bfafe36d2b8a"
       def install
         bin.install "sbox"
       end
