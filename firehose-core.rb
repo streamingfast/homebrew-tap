@@ -5,21 +5,21 @@
 class FirehoseCore < Formula
   desc ""
   homepage "https://github.com/streamingfast/firehose-core"
-  version "1.13.1"
+  version "1.13.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/firehose-core/releases/download/v1.13.1/firehose-core_darwin_x86_64.tar.gz"
-      sha256 "14849787b9548c16fccf8e55fccc70bfaa88919ade3dea82eb63cff5f53993b5"
+      url "https://github.com/streamingfast/firehose-core/releases/download/v1.13.2/firehose-core_darwin_x86_64.tar.gz"
+      sha256 "770a5c844c3623dfcf8fc84a3f56e762ca68933bff751677d80b62aa04003e0d"
 
       def install
         bin.install "firecore"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/firehose-core/releases/download/v1.13.1/firehose-core_darwin_arm64.tar.gz"
-      sha256 "00b46da3aa6027a1d8e7aa0f1cca7310d96690dae2cbca4a5b6bdddc0a3b03fd"
+      url "https://github.com/streamingfast/firehose-core/releases/download/v1.13.2/firehose-core_darwin_arm64.tar.gz"
+      sha256 "1d8b19d82b08bff9ec9e0f8a561a6c421abe962a17f9debb205d93463da1f398"
 
       def install
         bin.install "firecore"
@@ -29,15 +29,15 @@ class FirehoseCore < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/firehose-core/releases/download/v1.13.1/firehose-core_linux_x86_64.tar.gz"
-      sha256 "ec3e12ef2360d8b34b81c64c0c063fb904e6376ca0a552b29fbf35f5afad56e7"
+      url "https://github.com/streamingfast/firehose-core/releases/download/v1.13.2/firehose-core_linux_x86_64.tar.gz"
+      sha256 "6d755493102dc5b2f6000be7ac6dbf0079bdfac6781cc4a069840fa3c6c3e238"
       def install
         bin.install "firecore"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/firehose-core/releases/download/v1.13.1/firehose-core_linux_arm64.tar.gz"
-      sha256 "ee0685e401a1343dbaf9e785ca27027662aa00040bbee7b6e795aa03ceaa5b3b"
+      url "https://github.com/streamingfast/firehose-core/releases/download/v1.13.2/firehose-core_linux_arm64.tar.gz"
+      sha256 "7b285532eb98aba51a662550bc253505e96482dcd7c62c6493c2d91c93f45eea"
       def install
         bin.install "firecore"
       end
