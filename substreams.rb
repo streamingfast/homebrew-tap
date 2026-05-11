@@ -5,23 +5,23 @@
 class Substreams < Formula
   desc ""
   homepage "https://github.com/streamingfast/substreams"
-  version "1.18.4"
+  version "1.18.5"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/substreams/releases/download/v1.18.4/substreams_darwin_x86_64.tar.gz"
-      sha256 "5f3b966433aebac4841af609d7cd1d3b95e4266f38d47e906cf57f2440768cd1"
+      url "https://github.com/streamingfast/substreams/releases/download/v1.18.5/substreams_darwin_x86_64.tar.gz"
+      sha256 "2aa9f244686c12710b380aa42c03c050c4eec98725e52e94c846aa5734f69b4d"
 
-      def install
+      define_method(:install) do
         bin.install "substreams"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/substreams/releases/download/v1.18.4/substreams_darwin_arm64.tar.gz"
-      sha256 "1e56be44d4713dc7652ed0684245ffe28f31820827e3c6be93093fbc3edb1a01"
+      url "https://github.com/streamingfast/substreams/releases/download/v1.18.5/substreams_darwin_arm64.tar.gz"
+      sha256 "e2bbce6d79d98ab6da4a52bb4ef09eb6799c55fc17d0c12afdd52c1388512c60"
 
-      def install
+      define_method(:install) do
         bin.install "substreams"
       end
     end
@@ -29,16 +29,16 @@ class Substreams < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/substreams/releases/download/v1.18.4/substreams_linux_x86_64.tar.gz"
-      sha256 "fe1f667516e0299b2fa57d9971422592406ada6f89a9257e0f5a99c065cc5a64"
-      def install
+      url "https://github.com/streamingfast/substreams/releases/download/v1.18.5/substreams_linux_x86_64.tar.gz"
+      sha256 "ce2e4ee5f4c68ad06536163c076af60b0a5875acd4faad5df992d0e073f5909a"
+      define_method(:install) do
         bin.install "substreams"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/substreams/releases/download/v1.18.4/substreams_linux_arm64.tar.gz"
-      sha256 "346aeacc56a945e9e0630f2f7586da8912157410926e7fc2c34324f9518a3993"
-      def install
+      url "https://github.com/streamingfast/substreams/releases/download/v1.18.5/substreams_linux_arm64.tar.gz"
+      sha256 "8c72660add27598501bcd465183f268379f9465a6f144992225bf39f43b86aa8"
+      define_method(:install) do
         bin.install "substreams"
       end
     end
