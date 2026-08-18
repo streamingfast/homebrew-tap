@@ -8,6 +8,8 @@ class SubstreamsSinkSql < Formula
   version "4.13.1"
   license "Apache-2.0"
 
+  deprecate! date: "2026-08-18", because: "was folded into the substreams CLI; use `brew install streamingfast/tap/substreams` and `substreams sink postgres` instead"
+
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/streamingfast/substreams-sink-sql/releases/download/v4.13.1/substreams-sink-sql_darwin_x86_64.tar.gz"
