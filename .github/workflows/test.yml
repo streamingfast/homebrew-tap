@@ -20,11 +20,11 @@ jobs:
 
   style:
     runs-on: ubuntu-latest
-    # Advisory only: the generated formulae do not satisfy `brew style`, so this
-    # reports without gating. Not a required check.
-    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
 
+      # Advisory only: the generated formulae do not satisfy `brew style`, so the
+      # offences are reported in the log without failing the job. Not a required check.
       - name: brew style
+        continue-on-error: true
         run: brew style ./*.rb
