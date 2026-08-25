@@ -1,0 +1,30 @@
+name: Test
+
+# `test` is a required status check on master. It must run on every pull request —
+# no path filters — or a pull request that touches no formula never reports it and
+# can never be merged.
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate formulae
+        run: ruby .github/scripts/check-formulae.rb
+
+  style:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Advisory only: the generated formulae do not satisfy `brew style`, so the
+      # offences are reported in the log without failing the job. Not a required check.
+      - name: brew style
+        continue-on-error: true
+        run: brew style ./*.rb
