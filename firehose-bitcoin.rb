@@ -5,42 +5,40 @@
 class FirehoseBitcoin < Formula
   desc ""
   homepage "https://github.com/streamingfast/firehose-bitcoin"
-  version "1.0.0"
+  version "1.1.0"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/firehose-bitcoin/releases/download/v1.0.0/firehose-bitcoin_darwin_arm64.tar.gz"
-      sha256 "e00d7af2eee1405e79d8efd4ff33c5c189995fb7a6eabb93d4bc84309bf0b43e"
+    if Hardware::CPU.intel?
+      url "https://github.com/streamingfast/firehose-bitcoin/releases/download/v1.1.0/firehose-bitcoin_darwin_x86_64.tar.gz"
+      sha256 "0c234054cf3f9f07097520a484301f9df2fcd20b86012354b201edd908f23526"
 
-      def install
+      define_method(:install) do
         bin.install "firebtc"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/firehose-bitcoin/releases/download/v1.0.0/firehose-bitcoin_darwin_x86_64.tar.gz"
-      sha256 "9ccbaa14b11a1cec61c3c38e9339d304ea1e091c183550abbf3a9862fd48008b"
+    if Hardware::CPU.arm?
+      url "https://github.com/streamingfast/firehose-bitcoin/releases/download/v1.1.0/firehose-bitcoin_darwin_arm64.tar.gz"
+      sha256 "5c821887ef475fc0035abf9b8e663202da85a793b760acc842680b2fd96246df"
 
-      def install
+      define_method(:install) do
         bin.install "firebtc"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/firehose-bitcoin/releases/download/v1.0.0/firehose-bitcoin_linux_arm64.tar.gz"
-      sha256 "56f0737799538d0b020b483c8505389f2091cbd6427acfa463e94ba7a99498e7"
-
-      def install
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/streamingfast/firehose-bitcoin/releases/download/v1.1.0/firehose-bitcoin_linux_x86_64.tar.gz"
+      sha256 "cf3c238610ede1566b6863580069a28a3f4ede1ab739778ad5eb5e5d8c4caec4"
+      define_method(:install) do
         bin.install "firebtc"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/firehose-bitcoin/releases/download/v1.0.0/firehose-bitcoin_linux_x86_64.tar.gz"
-      sha256 "0ff8a0106b06f8e24b1e5831d334a9a94b1f2224e3003017dc6eb98f408b1707"
-
-      def install
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/streamingfast/firehose-bitcoin/releases/download/v1.1.0/firehose-bitcoin_linux_arm64.tar.gz"
+      sha256 "3293271db565b9f0b18d6223bcf7cd0a9b293446fa7854313f37c597e7ba0b74"
+      define_method(:install) do
         bin.install "firebtc"
       end
     end
