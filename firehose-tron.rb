@@ -5,21 +5,21 @@
 class FirehoseTron < Formula
   desc "Firehose and Substreams support for the Tron blockchain"
   homepage "https://github.com/streamingfast/firehose-tron"
-  version "0.5.2"
+  version "0.5.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/firehose-tron/releases/download/v0.5.2/firehose-tron_darwin_x86_64.tar.gz"
-      sha256 "4b8092076e2150550c89260ec9ca0479537969c3f1823f2f84e3edc0223ae4e1"
+      url "https://github.com/streamingfast/firehose-tron/releases/download/v0.5.3/firehose-tron_darwin_x86_64.tar.gz"
+      sha256 "1cd374379116f62f02e615660eeec08cb3d1eb9ba88e997bc9635112d6d4c0df"
 
       define_method(:install) do
         bin.install "firetron"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/firehose-tron/releases/download/v0.5.2/firehose-tron_darwin_arm64.tar.gz"
-      sha256 "4af7853349f15a3dce96b3092ac28ef1eb2cdad9c2a81a43bbeffdc6e5cf908b"
+      url "https://github.com/streamingfast/firehose-tron/releases/download/v0.5.3/firehose-tron_darwin_arm64.tar.gz"
+      sha256 "b8c14d74c1b424e957d32032a01cce28f1637461bfcfd77e0d812cdcb8e580ee"
 
       define_method(:install) do
         bin.install "firetron"
@@ -29,15 +29,15 @@ class FirehoseTron < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/firehose-tron/releases/download/v0.5.2/firehose-tron_linux_x86_64.tar.gz"
-      sha256 "5f47c5183ee9a9a374d8e900e43013037bb7d02fcb5d87e148f47ed72db8ee1a"
+      url "https://github.com/streamingfast/firehose-tron/releases/download/v0.5.3/firehose-tron_linux_x86_64.tar.gz"
+      sha256 "c2f92a4cd1c398fa10006ed4044f3708ecb0120895f4f6108e2f2b47027ea48b"
       define_method(:install) do
         bin.install "firetron"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/firehose-tron/releases/download/v0.5.2/firehose-tron_linux_arm64.tar.gz"
-      sha256 "4e310dbfa27b57a5fc79b5fbd002ae129883cd8ed8c5e0c76a529747976e4ec4"
+      url "https://github.com/streamingfast/firehose-tron/releases/download/v0.5.3/firehose-tron_linux_arm64.tar.gz"
+      sha256 "edd7a24ffabb68acb7a56ae7a4457435b9e6ba927b0e2243139739a6463238c0"
       define_method(:install) do
         bin.install "firetron"
       end
