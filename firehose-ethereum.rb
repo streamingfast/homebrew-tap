@@ -5,21 +5,21 @@
 class FirehoseEthereum < Formula
   desc ""
   homepage "https://github.com/streamingfast/firehose-ethereum"
-  version "2.23.0"
+  version "2.24.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/firehose-ethereum/releases/download/v2.23.0/firehose-ethereum_darwin_x86_64.tar.gz"
-      sha256 "48526faf3af26b3c58e17282fe440b8ab76cf4ded6744f11e64ac94f111ecbb5"
+      url "https://github.com/streamingfast/firehose-ethereum/releases/download/v2.24.0/firehose-ethereum_darwin_x86_64.tar.gz"
+      sha256 "b7f70e0c6424ec38ff27de349ddfdacbe0b8181fa6c17509f6a24071f062fe72"
 
       define_method(:install) do
         bin.install "fireeth"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/firehose-ethereum/releases/download/v2.23.0/firehose-ethereum_darwin_arm64.tar.gz"
-      sha256 "1ef8fd06221de19d24af8405d6a0dd81d12057df1803927e890131863fdb94c0"
+      url "https://github.com/streamingfast/firehose-ethereum/releases/download/v2.24.0/firehose-ethereum_darwin_arm64.tar.gz"
+      sha256 "0541d52bee0e062869dde21efa9e764927f77750f102dc40952cbf987596ee96"
 
       define_method(:install) do
         bin.install "fireeth"
@@ -29,15 +29,15 @@ class FirehoseEthereum < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/firehose-ethereum/releases/download/v2.23.0/firehose-ethereum_linux_x86_64.tar.gz"
-      sha256 "6854e0bf75326046ff3e0e89325ae97d1f8eee0653b32b399a2bdfaf8a7f6c8a"
+      url "https://github.com/streamingfast/firehose-ethereum/releases/download/v2.24.0/firehose-ethereum_linux_x86_64.tar.gz"
+      sha256 "70acb73f73e126c7c2f43097023d033daf76e1fd89d84f3876da38884ec0ca7c"
       define_method(:install) do
         bin.install "fireeth"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/firehose-ethereum/releases/download/v2.23.0/firehose-ethereum_linux_arm64.tar.gz"
-      sha256 "4105d6d5911a93b289e96df407e0ab6ed01f57ade6f6aacded364df39cc9d790"
+      url "https://github.com/streamingfast/firehose-ethereum/releases/download/v2.24.0/firehose-ethereum_linux_arm64.tar.gz"
+      sha256 "bf8036497451374066125e493cfb1fa2182ba13322d42a67d9bbb26115fcc681"
       define_method(:install) do
         bin.install "fireeth"
       end
