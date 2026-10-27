@@ -5,21 +5,21 @@
 class DummyBlockchain < Formula
   desc ""
   homepage "https://github.com/streamingfast/dummy-blockchain"
-  version "1.7.9"
+  version "1.7.10"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/dummy-blockchain/releases/download/v1.7.9/dummy-blockchain_darwin_x86_64.tar.gz"
-      sha256 "c3ae03d12aceb943192af2e3a92083416c6f0baa49ed1293b74e7ba2d84f4df3"
+      url "https://github.com/streamingfast/dummy-blockchain/releases/download/v1.7.10/dummy-blockchain_darwin_x86_64.tar.gz"
+      sha256 "fd9d613865fc41086606561271948ba8d92b70eba930e1d8963cd5cdcc06eea3"
 
       define_method(:install) do
         bin.install "dummy-blockchain"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/dummy-blockchain/releases/download/v1.7.9/dummy-blockchain_darwin_arm64.tar.gz"
-      sha256 "370581957602a70cb1591da0814348035f741eb55475645b3c5a7d3c6869d7f3"
+      url "https://github.com/streamingfast/dummy-blockchain/releases/download/v1.7.10/dummy-blockchain_darwin_arm64.tar.gz"
+      sha256 "185864eec68a0540fcfeda42b73476959160a6008b160f2d245b32848942e590"
 
       define_method(:install) do
         bin.install "dummy-blockchain"
@@ -29,15 +29,15 @@ class DummyBlockchain < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/dummy-blockchain/releases/download/v1.7.9/dummy-blockchain_linux_x86_64.tar.gz"
-      sha256 "5f0b5f98c27f1a418e211f0e09fc37f343152c747c3e2987914e8308c52b7fd6"
+      url "https://github.com/streamingfast/dummy-blockchain/releases/download/v1.7.10/dummy-blockchain_linux_x86_64.tar.gz"
+      sha256 "35b62ec6b8dab482d0388c09bcba8be1bf46d66000e718d261cb4d6ffb56c70d"
       define_method(:install) do
         bin.install "dummy-blockchain"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/dummy-blockchain/releases/download/v1.7.9/dummy-blockchain_linux_arm64.tar.gz"
-      sha256 "63cc59ac78d06c2a1d3aed46c0e7e0e0f33e4ba4c67282d1e9c826941bb2dfb1"
+      url "https://github.com/streamingfast/dummy-blockchain/releases/download/v1.7.10/dummy-blockchain_linux_arm64.tar.gz"
+      sha256 "d70e2aa1bef6bfb9c09e7a9237ad618625dd3c75da6ef348da7094917eb9cd3b"
       define_method(:install) do
         bin.install "dummy-blockchain"
       end
