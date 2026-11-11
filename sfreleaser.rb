@@ -5,21 +5,21 @@
 class Sfreleaser < Formula
   desc ""
   homepage "https://github.com/streamingfast/sfreleaser"
-  version "0.17.0"
+  version "0.18.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/sfreleaser/releases/download/v0.17.0/sfreleaser_darwin_x86_64.tar.gz"
-      sha256 "34716771f3e38cef6f3e8db260bd17ddda02387bdbd57c110b96910dcc8f36cf"
+      url "https://github.com/streamingfast/sfreleaser/releases/download/v0.18.0/sfreleaser_darwin_x86_64.tar.gz"
+      sha256 "9a513ec95f5bd3d52ebdcaf2778ad82bb7475b3e0dc0e1bb5b763ef508ac0ff0"
 
       define_method(:install) do
         bin.install "sfreleaser"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/sfreleaser/releases/download/v0.17.0/sfreleaser_darwin_arm64.tar.gz"
-      sha256 "95f7b66cc6abf2e739bbf3cd8483a1784b8cfb5b97118e522b94ed5686c971e7"
+      url "https://github.com/streamingfast/sfreleaser/releases/download/v0.18.0/sfreleaser_darwin_arm64.tar.gz"
+      sha256 "9b04d0e71defaae66636b9e5d63315450da6607b3aaadba5404810ca0f1abd1d"
 
       define_method(:install) do
         bin.install "sfreleaser"
@@ -29,15 +29,15 @@ class Sfreleaser < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/sfreleaser/releases/download/v0.17.0/sfreleaser_linux_x86_64.tar.gz"
-      sha256 "d9498e3ade5b8765934df5f5ce590c4213961466fbe0a994395c611180b2f77d"
+      url "https://github.com/streamingfast/sfreleaser/releases/download/v0.18.0/sfreleaser_linux_x86_64.tar.gz"
+      sha256 "9d68774827c18118fe4b0509f9678af485826d61c7e033ce380fde28d21a2de2"
       define_method(:install) do
         bin.install "sfreleaser"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/sfreleaser/releases/download/v0.17.0/sfreleaser_linux_arm64.tar.gz"
-      sha256 "39f09e76a42bc6b1058ff3e33ebbb1950cef154f465ef8b817bc8361bc9ed130"
+      url "https://github.com/streamingfast/sfreleaser/releases/download/v0.18.0/sfreleaser_linux_arm64.tar.gz"
+      sha256 "783e6b713e5c12401368778e66445023cf4971e1e9081b3f3b32b527fb6fa5c3"
       define_method(:install) do
         bin.install "sfreleaser"
       end
