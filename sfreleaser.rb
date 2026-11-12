@@ -11,7 +11,7 @@ class Sfreleaser < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/streamingfast/sfreleaser/releases/download/v0.18.1/sfreleaser_darwin_x86_64.tar.gz"
-      sha256 "be1e47f8baf8b5795fa770173cda2b0bb9221d5e987a0691f1a253aab311c2e8"
+      sha256 "5c13af344d6924d7f7cc3cd150b124a959f58299af4ed3456d76a33872fae710"
 
       define_method(:install) do
         bin.install "sfreleaser"
@@ -19,7 +19,7 @@ class Sfreleaser < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/streamingfast/sfreleaser/releases/download/v0.18.1/sfreleaser_darwin_arm64.tar.gz"
-      sha256 "9643dcfcc4590ab9dbb23ba9d64d3b465faf057d1f992a17840ce0aa3320f51d"
+      sha256 "e261b0abae7063df677882dda0e7f4f345e8f1b4980e1d593b0d80ba5aeb49b6"
 
       define_method(:install) do
         bin.install "sfreleaser"
@@ -30,14 +30,14 @@ class Sfreleaser < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/streamingfast/sfreleaser/releases/download/v0.18.1/sfreleaser_linux_x86_64.tar.gz"
-      sha256 "069009b4146edc5b67c2a59fbfa1c07246cc49db1d04d49c8598708744f7a45d"
+      sha256 "93e2c7619f1fea4b6bbc39e9b5ef410d8612cd4d08b7a9f8254c255a94d8d0ca"
       define_method(:install) do
         bin.install "sfreleaser"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/streamingfast/sfreleaser/releases/download/v0.18.1/sfreleaser_linux_arm64.tar.gz"
-      sha256 "a2f141c3dbdbf812e3324eb5e9eacc06682db91abc9d1ca99a65ca21670ed4b7"
+      sha256 "cd9c445c807386734f1f0a5d5dc8444b755ba170b8b825f60c8b1017d09a78c5"
       define_method(:install) do
         bin.install "sfreleaser"
       end
