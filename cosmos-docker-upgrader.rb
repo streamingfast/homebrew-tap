@@ -11,7 +11,7 @@ class CosmosDockerUpgrader < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/streamingfast/cosmos-docker-upgrader/releases/download/v1.1.3/cosmos-docker-upgrader_darwin_x86_64.tar.gz"
-      sha256 "7305825ba4b4822c439d4c20aa1426f7382ae4a8f8ee951b2ffdbd3f41e49261"
+      sha256 "a7011fce481929b7fbc833a5b4799b6bd6983787b9359894f20171dc08e3cd39"
 
       define_method(:install) do
         bin.install "cosmos-docker-upgrader"
@@ -19,7 +19,7 @@ class CosmosDockerUpgrader < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/streamingfast/cosmos-docker-upgrader/releases/download/v1.1.3/cosmos-docker-upgrader_darwin_arm64.tar.gz"
-      sha256 "2a89a1e1b8e00e828def0af6ec112c8897f9faeb699c9b72b6324dd5cd543711"
+      sha256 "1becaf5291a855e8f9f40641293d3ead2affb0a5066a2ca40fb04357f28420b9"
 
       define_method(:install) do
         bin.install "cosmos-docker-upgrader"
@@ -30,14 +30,14 @@ class CosmosDockerUpgrader < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/streamingfast/cosmos-docker-upgrader/releases/download/v1.1.3/cosmos-docker-upgrader_linux_x86_64.tar.gz"
-      sha256 "4552f31887ac73aa9a6c25011aeaece332a11fa446f1449161263f4c91a07252"
+      sha256 "79620b37a834ee516e0250ad842e22f3ccd4ba0762922818f0e19c9fb35b9cb6"
       define_method(:install) do
         bin.install "cosmos-docker-upgrader"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/streamingfast/cosmos-docker-upgrader/releases/download/v1.1.3/cosmos-docker-upgrader_linux_arm64.tar.gz"
-      sha256 "93af5c866108fc6108783d5ad80eedfb53f748c44b51baef56b827372938df61"
+      sha256 "d655519ae0193324a3341999e279e98d316d99803a94d1a9161c75c40e1016a5"
       define_method(:install) do
         bin.install "cosmos-docker-upgrader"
       end
