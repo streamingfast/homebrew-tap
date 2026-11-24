@@ -5,21 +5,21 @@
 class CosmosDockerUpgrader < Formula
   desc ""
   homepage "https://github.com/streamingfast/cosmos-docker-upgrader"
-  version "1.1.2"
+  version "1.1.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/streamingfast/cosmos-docker-upgrader/releases/download/v1.1.2/cosmos-docker-upgrader_darwin_x86_64.tar.gz"
-      sha256 "ee07d1428853032eb254fd0164572311f3e409f1a47eecd13b7ed025b7b753cb"
+      url "https://github.com/streamingfast/cosmos-docker-upgrader/releases/download/v1.1.3/cosmos-docker-upgrader_darwin_x86_64.tar.gz"
+      sha256 "7305825ba4b4822c439d4c20aa1426f7382ae4a8f8ee951b2ffdbd3f41e49261"
 
       define_method(:install) do
         bin.install "cosmos-docker-upgrader"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/streamingfast/cosmos-docker-upgrader/releases/download/v1.1.2/cosmos-docker-upgrader_darwin_arm64.tar.gz"
-      sha256 "be3a144af2c1fb4824df1bb3e02f3769987d82ca7eb251050bbcc319c2fad2cf"
+      url "https://github.com/streamingfast/cosmos-docker-upgrader/releases/download/v1.1.3/cosmos-docker-upgrader_darwin_arm64.tar.gz"
+      sha256 "2a89a1e1b8e00e828def0af6ec112c8897f9faeb699c9b72b6324dd5cd543711"
 
       define_method(:install) do
         bin.install "cosmos-docker-upgrader"
@@ -29,15 +29,15 @@ class CosmosDockerUpgrader < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/cosmos-docker-upgrader/releases/download/v1.1.2/cosmos-docker-upgrader_linux_x86_64.tar.gz"
-      sha256 "6f1235d8e7805b7c9af0370825e88eee333312a28145e54495778158ac5eb145"
+      url "https://github.com/streamingfast/cosmos-docker-upgrader/releases/download/v1.1.3/cosmos-docker-upgrader_linux_x86_64.tar.gz"
+      sha256 "4552f31887ac73aa9a6c25011aeaece332a11fa446f1449161263f4c91a07252"
       define_method(:install) do
         bin.install "cosmos-docker-upgrader"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/streamingfast/cosmos-docker-upgrader/releases/download/v1.1.2/cosmos-docker-upgrader_linux_arm64.tar.gz"
-      sha256 "4e34139f35a54bc25907754abbdc9e67a1d0b13fa398d4d944abcb94abbd4cfd"
+      url "https://github.com/streamingfast/cosmos-docker-upgrader/releases/download/v1.1.3/cosmos-docker-upgrader_linux_arm64.tar.gz"
+      sha256 "93af5c866108fc6108783d5ad80eedfb53f748c44b51baef56b827372938df61"
       define_method(:install) do
         bin.install "cosmos-docker-upgrader"
       end
